@@ -29,7 +29,9 @@ function MakeGithubTable(responseData)
   return (
   <>
   Data for Github bruger "{login}"
-  <img src={avatar_url} style={{maxWidth: "100px", maxHeight: "100px"}}></img>
+  <a href={html_url} id="avatar" target="_blank">
+    <img src={avatar_url} style={{maxWidth: "100px", maxHeight: "100px"}}></img>
+  </a>
   <table>
     <thead><tr><th>Oprettet</th><th>Sidst opdateret</th><th>Twitter</th><th>Offentlige Repos</th><th>Følgere</th><th>Profilside</th></tr></thead>
     <tbody><tr><td>{formatDate(created_at)}</td><td>{formatDate(updated_at)}</td><td>{twitter_username}</td><td>{public_repos}</td><td>{followers}</td><td><a href={html_url} target="_blank">Klik her</a></td></tr></tbody>
@@ -64,7 +66,7 @@ function App() {
       Github brugernavn:
       <input type="text" name="GithubUsername" onChange={e => setText(e.target.value)}/>
       </label>
-      <button onClick={handleButtonClick}>Søg</button>
+      <button id="fetchButton" onClick={handleButtonClick}>Hent data</button>
       {displayInfo ? displayInfo : null}
       </header>
     </div>
