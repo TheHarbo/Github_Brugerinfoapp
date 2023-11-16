@@ -10,4 +10,8 @@ Derefter bliver der lavet et Get kald til https://api.github.com/users/ med en p
 
 Du får herefter nogle basale oplysninger at vide om brugeren.
 
-Eksisterer brugeren ikke vil du blive indformeret om det.
+Eksisterer brugeren ikke vil du blive informeret om det.
+
+## Andet
+
+Get-kaldene er ikke authentificerede, og der er derfor en begrænsning på 60 i timen kald pr. IP.
