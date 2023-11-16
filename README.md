@@ -6,7 +6,7 @@ Velkommen til min lille opgaveapp. Denne app har til formål at hente data ned p
 
 Sørg for at du har React installeret.
 Hent repositoriet ned.
-Kør kommandoen "npm start" fra en terminal i "my app" mappen.
+Kør kommandoen "npm start" fra en terminal i hovedmappen.
 
 ## Appen i sig selv
 
