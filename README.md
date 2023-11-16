@@ -2,6 +2,12 @@
 
 Velkommen til min lille opgaveapp. Denne app har til formål at hente data ned på en Github bruger, og fremvise det.
 
+## Kørsel
+
+Sørg for at du har React installeret.
+Hent repositoriet ned
+Kør kommandoen "npm start" fra en terminal i "my app" mappen
+
 ## Appen i sig selv
 
 Appen indeholder en tekstboks og en knap til at starte med. Meningen er at du indtaster et brugernavn, og derefter trykker på knappen
