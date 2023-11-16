@@ -9,7 +9,11 @@ async function getUser(username) {
 
     return data;
   } else {
-    return null;
+    if (response.status === 403) {
+      return "Too many requests.";
+    } else {
+      return null;
+    }
   }
 }
 
@@ -78,7 +82,13 @@ function App() {
   async function handleButtonClick() {
     const responseData = await getUser(text);
     if (responseData) {
-      setDisplayInfo(makeGithubTable(responseData));
+      if (responseData === "Too many requests.") {
+        setDisplayInfo(
+          "Der er blevet lavet for mange forespørgelser fra denne IP adresse. Vent en time med at bruge denne app igen."
+        );
+      } else {
+        setDisplayInfo(makeGithubTable(responseData));
+      }
     } else {
       setDisplayInfo('Ingen data blev fundet på bruger "' + text + '"');
     }
