@@ -37,6 +37,7 @@ function makeGithubTable(responseData) {
         <img
           src={avatar_url}
           style={{ maxWidth: "100px", maxHeight: "100px" }}
+          alt="The avatar of the user"
         ></img>
       </a>
       <table>
@@ -74,7 +75,7 @@ function App() {
 
   const [displayInfo, setDisplayInfo] = useState();
 
-  async function handleButtonClick(e) {
+  async function handleButtonClick() {
     const responseData = await getUser(text);
     if (responseData) {
       setDisplayInfo(makeGithubTable(responseData));
